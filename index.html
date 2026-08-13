@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isenção de Imposto de Renda por Doença Grave | Kazunari & Antunes Advogados</title>
-    <meta name="description" content="Saiba se você tem direito à isenção de IRPF e à restituição dos valores pagos nos últimos 5 anos. Lei nº 7.713/88.">
+    <title>Isenção de IRPF & Restituição Retroativa | Kazunari & Antunes Advogados</title>
+    <meta name="description" content="Análise jurídica especializada para isenção de Imposto de Renda e recuperação dos últimos 5 anos para aposentados e pensionistas com doenças graves.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,350 +21,442 @@
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            navy: '#0B132B',
-                            dark: '#1C2541',
-                            accent: '#C99E5C',
-                            accentLight: '#E8CA8F',
-                            emerald: '#10B981',
-                            slate: '#F8FAFC'
+                        obsidian: '#080B11',
+                        surface: '#0F1523',
+                        surfaceHover: '#161F33',
+                        gold: {
+                            400: '#E6CA85',
+                            500: '#D1A751',
+                            600: '#B88E3B',
+                        },
+                        emerald: {
+                            500: '#10B981',
+                            600: '#059669',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
                         }
                     }
                 }
             }
         }
     </script>
+    
     <style>
-        .hero-pattern {
-            background: radial-gradient(circle at top right, rgba(201, 158, 92, 0.12), transparent 40%),
-                        linear-gradient(135deg, #0B132B 0%, #1C2541 100%);
+        /* Gradientes e Brilhos de Fundo */
+        .ambient-glow {
+            background: radial-gradient(circle 800px at 50% -100px, rgba(209, 167, 81, 0.12), transparent 70%),
+                        radial-gradient(circle 600px at 100% 40%, rgba(16, 185, 129, 0.06), transparent 60%);
         }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 20%, #E6CA85 70%, #B88E3B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px -10px rgba(11, 19, 43, 0.15);
+
+        /* Efeito de Vidro Fosco Sofisticado */
+        .glass-card {
+            background: rgba(15, 21, 35, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(209, 167, 81, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(209, 167, 81, 0.1);
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="font-sans text-slate-800 bg-[#FDFDFE] antialiased">
+<body class="bg-obsidian text-slate-200 antialiased selection:bg-gold-500/20 selection:text-gold-400 overflow-x-hidden font-sans">
 
-    <!-- TOPBAR / CREDENCIAIS -->
-    <div class="bg-brand-navy border-b border-slate-800/80 py-2.5 px-4 text-xs text-slate-300">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-2 font-medium">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                Atendimento Jurídico Especializado
-            </div>
-            <div class="text-slate-400 text-center sm:text-right">
-                <span>Douglas Kazunari • OAB/PA 24.937</span>
-                <span class="mx-2 text-slate-600">|</span>
-                <span>Marta Inez Antunes • OAB/PA 22.706</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- NAVBAR -->
-    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <!-- BARRA INSTITUCIONAL SUPERIOR -->
+    <header class="border-b border-white/5 bg-obsidian/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-brand-navy flex items-center justify-center text-brand-accent font-extrabold text-lg border border-brand-accent/30 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-500/20 to-transparent border border-gold-500/30 flex items-center justify-center font-bold text-gold-400 text-sm tracking-wider">
                     K&A
                 </div>
                 <div>
-                    <div class="font-bold text-slate-900 leading-none text-base">Kazunari & Antunes</div>
-                    <div class="text-[11px] text-slate-500 font-medium tracking-wide uppercase mt-1">Advogados Associados</div>
+                    <span class="text-sm font-semibold tracking-wide text-white block leading-none">Kazunari & Antunes</span>
+                    <span class="text-[10px] text-slate-400 tracking-widest uppercase font-medium mt-1 block">Sociedade de Advogados</span>
                 </div>
             </div>
-            <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20uma%20análise%20sobre%20isenção%20de%20IRPF%20por%20doença%20grave." 
-               target="_blank"
-               class="hidden sm:inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2.5 px-5 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md">
-                <span>Analisar Meu Caso</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-        </div>
-    </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero-pattern text-white py-20 lg:py-28 px-6 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-brand-accent/15 border border-brand-accent/30 text-brand-accentLight font-semibold text-xs mb-8 tracking-wide uppercase">
-                <svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                Direito Assegurado pela Lei nº 7.713/88
+            <div class="hidden md:flex items-center gap-6 text-xs text-slate-400">
+                <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+                    Douglas Kazunari &bull; OAB/PA 24.937
+                </span>
+                <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+                    Marta Inez Antunes &bull; OAB/PA 22.706
+                </span>
             </div>
-            
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
-                Deixe de pagar Imposto de Renda e <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-accentLight">recupere os valores dos últimos 5 anos</span>
-            </h1>
-            
-            <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Aposentados, pensionistas e militares da reserva diagnosticados com enfermidades graves têm direito à isenção total de IRPF e à restituição retroativa.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20uma%20análise%20gratuita%20sobre%20meu%20direito%20à%20isenção%20de%20IRPF." 
-                   target="_blank"
-                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base py-4 px-8 rounded-xl shadow-lg shadow-emerald-900/30 transition-all duration-300 hover:scale-[1.02]">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    <span>Verificar Meu Direito no WhatsApp</span>
+
+            <div>
+                <a href="#simulador" class="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-lg border border-gold-500/30 text-gold-400 hover:bg-gold-500/10 transition-all duration-300">
+                    <span>Simular Valores</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
-            </div>
-
-            <!-- SELOS DE CONFIANÇA -->
-            <div class="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-                <span class="flex items-center gap-1.5">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Atendimento 100% Digital e Seguro
-                </span>
-                <span class="flex items-center gap-1.5">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Análise Prévia Sem Custo Inicial
-                </span>
-                <span class="flex items-center gap-1.5">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Sigilo Profissional Resguardado
-                </span>
             </div>
         </div>
     </header>
 
-    <!-- SEÇÃO 1: DOENÇAS PREVISTAS -->
-    <section class="py-20 px-6 max-w-6xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-            <span class="text-brand-accent font-bold text-xs uppercase tracking-wider">Enquadramento Legal</span>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-2 mb-4">
-                Condições de Saúde Elegíveis para Isenção
-            </h2>
-            <p class="text-slate-600 text-sm sm:text-base">
-                O rol do art. 6º, XIV da Lei nº 7.713/88 contempla diversas patologias. Confira as principais:
+    <!-- HERO SECTION -->
+    <main class="relative ambient-glow pt-16 pb-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- BADGE PULSANTE -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/10 text-xs text-slate-300 mb-8 backdrop-blur-md">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="font-medium tracking-wide">Lei Federal nº 7.713/88 &bull; Artigo 6º, Inciso XIV</span>
+            </div>
+
+            <!-- TÍTULO PRINCIPAL -->
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-8">
+                Cancele o Imposto de Renda e recupere o que pagou nos <span class="gold-gradient-text">últimos 5 anos</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+                Aposentados, pensionistas e militares reformados portadores de doenças graves têm direito à isenção definitiva de IRPF e à restituição corrigida dos valores retidos na fonte.
             </p>
-        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">✓</div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base">Neoplasia Maligna (Câncer)</h3>
-                    <p class="text-slate-500 text-xs mt-1">Válido mesmo em caso de cura recente ou remissão de sintomas (STJ 627).</p>
-                </div>
+            <!-- AÇÕES HERO -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#simulador" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-obsidian font-bold text-sm tracking-wide shadow-lg shadow-gold-500/10 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                    <span>Calcular Minha Restituição</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+                <a href="https://wa.me/5591999999999?text=Olá,%20Drs.%20Douglas%20e%20Marta.%20Gostaria%20de%20uma%20análise%20sobre%20a%20isenção%20do%20meu%20Imposto%20de%20Renda." 
+                   target="_blank" 
+                   class="w-full sm:w-auto px-6 py-4 rounded-xl glass-card text-white hover:text-gold-400 text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <span>Falar no WhatsApp</span>
+                </a>
             </div>
 
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">✓</div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base">Cardiopatia Grave</h3>
-                    <p class="text-slate-500 text-xs mt-1">Infartos, colocação de stents/pontes, arritmias severas e insuficiências.</p>
+            <!-- NÚMEROS / MÉTRICAS -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-16 max-w-3xl mx-auto pt-10 border-t border-white/5">
+                <div class="p-4 text-center">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-white">60 Meses</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-1 block">Restituição Retroativa</span>
                 </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">✓</div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base">Mal de Parkinson</h3>
-                    <p class="text-slate-500 text-xs mt-1">Diagnóstico neurológico progressivo comprovado por laudo médico.</p>
+                <div class="p-4 text-center">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-white">STJ 598/627</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-1 block">Súmulas Favoráveis</span>
                 </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">✓</div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base">Esclerose Múltipla</h3>
-                    <p class="text-slate-500 text-xs mt-1">Doença inflamatória crônica do sistema nervoso central.</p>
-                </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">✓</div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base">Nefropatia ou Hepatopatia Grave</h3>
-                    <p class="text-slate-500 text-xs mt-1">Comprometimento severo dos rins ou fígado crônicos.</p>
-                </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">✓</div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-base">Espondiloartrose Anquilosante</h3>
-                    <p class="text-slate-500 text-xs mt-1">Afecções graves e incapacitantes da coluna e articulações.</p>
+                <div class="p-4 text-center col-span-2 md:col-span-1">
+                    <span class="block text-2xl sm:text-3xl font-extrabold text-emerald-400">100% Digital</span>
+                    <span class="text-xs text-slate-500 uppercase tracking-wider mt-1 block">Sem Deslocamento</span>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="mt-8 bg-amber-50/80 border border-amber-200 p-5 rounded-xl text-left flex items-start gap-3.5">
-            <svg class="w-6 h-6 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <p class="text-xs sm:text-sm text-amber-900 leading-relaxed">
-                <strong>Requisito Importante:</strong> O benefício legal aplica-se estritamente sobre proventos de <strong>Aposentadoria, Pensão ou Reforma Militar</strong> (não abrange rendimentos de trabalho ativo).
-            </p>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 2: OS 3 BENEFÍCIOS -->
-    <section class="py-20 px-6 bg-brand-navy text-white relative">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-accent font-bold text-xs uppercase tracking-wider">Garantias da Lei</span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mt-2">
-                    Os 3 Pilares do Seu Direito
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-dark/60 p-8 rounded-2xl border border-slate-700/60 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accentLight flex items-center justify-center text-xl font-black mb-6">1</div>
-                    <h3 class="text-lg font-bold mb-3 text-white">Suspensão dos Descontos</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Cessação definitiva da retenção de imposto de renda diretamente na folha de pagamento ou benefício previdenciário.</p>
-                </div>
-
-                <div class="bg-brand-dark/60 p-8 rounded-2xl border border-slate-700/60 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accentLight flex items-center justify-center text-xl font-black mb-6">2</div>
-                    <h3 class="text-lg font-bold mb-3 text-white">Restituição de até 5 Anos</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Recuperação com correção monetária de todos os valores descontados indevidamente nos últimos 60 meses a partir do diagnóstico.</p>
-                </div>
-
-                <div class="bg-brand-dark/60 p-8 rounded-2xl border border-slate-700/60 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-brand-accent/20 text-brand-accentLight flex items-center justify-center text-xl font-black mb-6">3</div>
-                    <h3 class="text-lg font-bold mb-3 text-white">Aceite de Laudo Particular</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Conforme a Súmula 598 do STJ, não é obrigatório apresentar laudo oficial do SUS; atestados particulares são aceitos em juízo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 3: ETAPAS DA CONSULTORIA -->
-    <section class="py-20 px-6 max-w-4xl mx-auto">
-        <div class="text-center mb-16">
-            <span class="text-brand-accent font-bold text-xs uppercase tracking-wider">Etapas Transparentes</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Como Funciona a Análise do Seu Caso</h2>
-        </div>
-
-        <div class="space-y-6">
-            <div class="flex gap-5 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm card-hover items-center">
-                <div class="w-12 h-12 rounded-2xl bg-slate-100 text-brand-navy font-black text-lg flex items-center justify-center shrink-0 border border-slate-200">
-                    1
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-base">Envio Inicial de Documentos</h4>
-                    <p class="text-slate-600 text-xs sm:text-sm mt-1">Envio do extrato de benefício/contracheque e laudos médicos através do WhatsApp com total sigilo.</p>
-                </div>
-            </div>
-
-            <div class="flex gap-5 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm card-hover items-center">
-                <div class="w-12 h-12 rounded-2xl bg-slate-100 text-brand-navy font-black text-lg flex items-center justify-center shrink-0 border border-slate-200">
-                    2
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-base">Cálculo e Viabilidade Jurídica</h4>
-                    <p class="text-slate-600 text-xs sm:text-sm mt-1">Realizamos a conferência dos valores retroativos dos últimos 5 anos e a elegibilidade da condição clínica.</p>
-                </div>
-            </div>
-
-            <div class="flex gap-5 p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm card-hover items-center">
-                <div class="w-12 h-12 rounded-2xl bg-slate-100 text-brand-navy font-black text-lg flex items-center justify-center shrink-0 border border-slate-200">
-                    3
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-base">Condução Especializada</h4>
-                    <p class="text-slate-600 text-xs sm:text-sm mt-1">Ajuizamento da medida ou pedido com acompanhamento jurídico em todas as instâncias competentes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 4: FAQ INTERATIVO -->
-    <section class="py-20 px-6 bg-slate-50 border-y border-slate-200/60">
+    <!-- SIMULADOR INTERATIVO (LEAD MAGNET) -->
+    <section id="simulador" class="py-20 px-6 border-y border-white/5 bg-surface/40 relative">
         <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-brand-accent font-bold text-xs uppercase tracking-wider">Esclarecimentos</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Dúvidas Frequentes</h2>
+            <div class="text-center mb-10 reveal">
+                <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Ferramenta Interativa</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Simulador de Recuperação Retroativa</h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-2">Estime quanto foi retido indevidamente nos últimos 5 anos de proventos.</p>
             </div>
 
-            <div class="space-y-4" id="faq-container">
-                <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm transition-all duration-200">
-                    <button class="faq-toggle w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50/80 transition-colors">
-                        <span>Já fui curado do câncer ou não sinto sintomas atuais. Ainda tenho direito?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-content hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                        Sim. A jurisprudência consolidada do Superior Tribunal de Justiça (Súmula 627 do STJ) estabelece que a isenção de IRPF independe da contemporaneidade dos sintomas ou de eventual cura, reconhecendo a necessidade de manutenção do equilíbrio financeiro pós-tratamento.
+            <div class="glass-card rounded-3xl p-6 sm:p-10 reveal">
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-300">Desconto Médio Mensal de IRPF no Contracheque:</label>
+                            <span id="valorDisplay" class="text-lg font-bold text-gold-400">R$ 1.500 / mês</span>
+                        </div>
+                        <input type="range" id="descontoRange" min="300" max="8000" step="100" value="1500" 
+                               class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-gold-400">
+                        <div class="flex justify-between text-[11px] text-slate-500 mt-2">
+                            <span>R$ 300</span>
+                            <span>R$ 4.000</span>
+                            <span>R$ 8.000+</span>
+                        </div>
                     </div>
+
+                    <div>
+                        <label class="text-sm font-medium text-slate-300 block mb-2">Há quanto tempo você foi diagnosticado ou é aposentado?</label>
+                        <select id="tempoSelect" class="w-full bg-obsidian/90 border border-white/10 rounded-xl px-4 py-3 text-sm text-slate-200 focus:outline-none focus:border-gold-400 transition-colors">
+                            <option value="60">5 anos ou mais (Período Máximo de 60 meses)</option>
+                            <option value="48">4 anos (48 meses)</option>
+                            <option value="36">3 anos (36 meses)</option>
+                            <option value="24">2 anos (24 meses)</option>
+                            <option value="12">1 ano (12 meses)</option>
+                        </select>
+                    </div>
+
+                    <!-- RESULTADO DA ESTIMATIVA -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-br from-gold-500/10 via-white/[0.02] to-transparent border border-gold-500/20 text-center mt-8">
+                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Potencial Estimado a Restituir</span>
+                        <div id="resultadoEstimativa" class="text-3xl sm:text-4xl font-extrabold text-white my-2 gold-gradient-text">
+                            R$ 90.000,00
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1">*Cálculo referencial sobre o valor principal sem inclusão da taxa SELIC de correção monetária.</p>
+                    </div>
+
+                    <!-- BOTÃO ENVIAR SIMULAÇÃO -->
+                    <button id="btnWhatsappSimulacao" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-950/40 transition-all duration-300 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>Enviar Simulação para Análise dos Advogados</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROL DE ENFERMIDADES (CARDS MINIMALISTAS) -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Enquadramento Legal</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Condições de Saúde Previstas na Lei</h2>
+            <p class="text-slate-400 text-sm mt-3">A Lei nº 7.713/88 elenca diagnósticos que autorizam a imediata desoneração tributária:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="glass-card p-6 rounded-2xl reveal">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm mb-4">01</div>
+                <h3 class="text-white font-semibold text-base mb-1.5">Neoplasia Maligna (Câncer)</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Concedido mesmo após cirurgia ou cura clínica comprovada (Súmula 627 STJ).</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl reveal">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm mb-4">02</div>
+                <h3 class="text-white font-semibold text-base mb-1.5">Cardiopatia Grave</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Pós-infarto, implante de pontes/stents, arritmias severas ou insuficiência cardíaca.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl reveal">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm mb-4">03</div>
+                <h3 class="text-white font-semibold text-base mb-1.5">Mal de Parkinson</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Condição neurológica degenerativa respaldada por relatórios médicos especializados.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl reveal">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm mb-4">04</div>
+                <h3 class="text-white font-semibold text-base mb-1.5">Nefropatia ou Hepatopatia</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Insuficiência renal crônica, cirrose hepática e enfermidades viscerais graves.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl reveal">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm mb-4">05</div>
+                <h3 class="text-white font-semibold text-base mb-1.5">Esclerose Múltipla</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Afecção inflamatória autoimune crônica do sistema nervoso central.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl reveal">
+                <div class="w-8 h-8 rounded-lg bg-gold-500/10 text-gold-400 flex items-center justify-center font-bold text-sm mb-4">06</div>
+                <h3 class="text-white font-semibold text-base mb-1.5">Espondiloartrose & Outras</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Lesões graves da coluna vertebral, Doença de Paget, Cegueira e Paralisia Irreversível.</p>
+            </div>
+        </div>
+
+        <div class="mt-8 p-4 rounded-xl border border-white/5 bg-white/[0.02] text-center reveal">
+            <p class="text-xs text-slate-400">
+                <span class="text-gold-400 font-semibold">Observação Técnica:</span> O benefício destina-se a <strong>Aposentados, Pensionistas e Militares Reformados</strong> de regimes próprios (União, Estados, Municípios) ou INSS.
+            </p>
+        </div>
+    </section>
+
+    <!-- PILARES JURÍDICOS -->
+    <section class="py-20 px-6 bg-surface/50 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl glass-card reveal">
+                    <div class="text-gold-400 text-2xl font-bold mb-4">01.</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Cessação Imediata</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Bloqueio das retenções de IRPF diretamente na folha ou no órgão pagador competente.</p>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm transition-all duration-200">
-                    <button class="faq-toggle w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50/80 transition-colors">
-                        <span>Preciso comparecer a uma perícia médica do órgão público ou INSS?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-content hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                        Não necessariamente. O STJ pacificou na Súmula 598 que o magistrado é livre para apreciar a prova médica, sendo plenamente válidos atestados, exames e relatórios emitidos por médicos e hospitais particulares.
-                    </div>
+                <div class="p-8 rounded-2xl glass-card reveal">
+                    <div class="text-gold-400 text-2xl font-bold mb-4">02.</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Retroativo com SELIC</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Devolução corrigida de todo o imposto retido nos últimos 5 anos a contar do diagnóstico.</p>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm transition-all duration-200">
-                    <button class="faq-toggle w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50/80 transition-colors">
-                        <span>Quanto tempo leva a avaliação preliminar?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-content hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                        A análise inicial dos documentos é concluída em até 24 a 48 horas úteis após o envio dos laudos e contracheques pelo WhatsApp.
-                    </div>
+                <div class="p-8 rounded-2xl glass-card reveal">
+                    <div class="text-gold-400 text-2xl font-bold mb-4">03.</div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Laudo Particular</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Dispensa de perícia do INSS; exames de hospitais particulares possuem pleno valor probatório (STJ 598).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="py-24 px-6 max-w-3xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <span class="text-xs font-semibold text-gold-400 uppercase tracking-widest">Respostas Claras</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mt-2">Dúvidas Frequentes</h2>
+        </div>
+
+        <div class="space-y-3" id="faqAccordion">
+            <div class="glass-card rounded-2xl overflow-hidden reveal">
+                <button class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm font-semibold text-white hover:text-gold-400 transition-colors">
+                    <span>Estou sem sintomas ou clinicamente curado. Tenho direito?</span>
+                    <svg class="faq-arrow w-4 h-4 text-slate-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-body hidden px-6 pb-6 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    Sim. A Súmula 627 do STJ assegura que a isenção de IRPF não exige a contemporaneidade dos sintomas, mantendo a proteção aos aposentados que necessitam de acompanhamento e suporte financeiro.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden reveal">
+                <button class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm font-semibold text-white hover:text-gold-400 transition-colors">
+                    <span>Preciso passar por perícia oficial do INSS ou do Estado?</span>
+                    <svg class="faq-arrow w-4 h-4 text-slate-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-body hidden px-6 pb-6 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    Não obrigatoriamente. A Súmula 598 do STJ autoriza a comprovação da doença grave por meio de laudos, exames e relatórios emitidos por médicos e clínicas particulares de sua confiança.
+                </div>
+            </div>
+
+            <div class="glass-card rounded-2xl overflow-hidden reveal">
+                <button class="faq-btn w-full p-6 text-left flex justify-between items-center text-sm font-semibold text-white hover:text-gold-400 transition-colors">
+                    <span>Como funciona a assessoria do escritório?</span>
+                    <svg class="faq-arrow w-4 h-4 text-slate-500 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div class="faq-body hidden px-6 pb-6 text-xs sm:text-sm text-slate-400 leading-relaxed border-t border-white/5 pt-4">
+                    Atuamos de forma 100% digital em todo o território nacional. Realizamos a pré-análise documental sem custo inicial e acompanhamos o processo administrativo ou judicial com total sigilo.
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER / CTA FINAL -->
-    <footer id="contato" class="bg-brand-navy text-white pt-16 pb-12 px-6">
+    <footer class="border-t border-white/5 bg-obsidian pt-16 pb-28 sm:pb-16 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Inicie a Análise da Sua Isenção</h2>
-            <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-xl mx-auto">
-                Converse com nossa equipe e compreenda seus direitos com respaldo legal e transparência.
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">Inicie o Exame do Seu Caso</h2>
+            <p class="text-slate-400 text-xs sm:text-sm mb-8 max-w-md mx-auto">
+                Fale diretamente com os advogados titulares para entender os procedimentos e prazos aplicáveis.
             </p>
-            
-            <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20iniciar%20minha%20análise%20de%20isenção%20de%20IRPF." 
+
+            <a href="https://wa.me/5591999999999?text=Olá,%20Drs.%20Douglas%20e%20Marta.%20Gostaria%20de%20iniciar%20a%20análise%20dos%20meus%20documentos." 
                target="_blank"
-               class="inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base py-4 px-10 rounded-xl shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <span>Falar com o Escritório pelo WhatsApp</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+               class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-950/40 transition-all duration-300 hover:scale-[1.02]">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <span>Falar no WhatsApp com os Advogados</span>
             </a>
 
-            <!-- DADOS DOS ADVOGADOS -->
-            <div class="mt-14 pt-8 border-t border-slate-800 text-xs text-slate-400 space-y-2">
-                <p class="font-semibold text-slate-300">Kazunari & Antunes Advogados Associados</p>
-                <p>Douglas Kazunari — OAB/PA 24.937 &bull; Marta Inez Antunes — OAB/PA 22.706</p>
-                <p class="text-slate-400 text-[11px] mt-4">
-                    Este site tem caráter meramente informativo e educacional, em estrita observância ao Código de Ética e Disciplina da OAB e ao Provimento 205/2021 do CFOAB.
+            <!-- IDENTIFICAÇÃO FORMAL DA BANCA -->
+            <div class="mt-16 pt-8 border-t border-white/5 text-xs text-slate-500 space-y-2">
+                <p class="font-semibold text-slate-300 text-sm">Kazunari & Antunes Sociedade de Advogados</p>
+                <p class="text-slate-400">Douglas Kazunari &bull; OAB/PA 24.937 &nbsp;|&nbsp; Marta Inez Antunes &bull; OAB/PA 22.706</p>
+                <p class="text-[11px] text-slate-600 mt-4 max-w-xl mx-auto">
+                    Conteúdo puramente informativo em estrita conformidade com o Provimento nº 205/2021 do Conselho Federal da OAB e o Código de Ética e Disciplina da OAB.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- BOTÃO WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20uma%20análise%20sobre%20isenção%20de%20IRPF." 
-       target="_blank"
-       aria-label="Fale no WhatsApp"
-       class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-    </a>
+    <!-- BARRA FLUTUANTE INFERIOR (MOBILE & DESKTOP) -->
+    <div class="fixed bottom-6 inset-x-6 z-50 max-w-md mx-auto">
+        <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20uma%20análise%20sobre%20a%20isenção%20de%20IRPF." 
+           target="_blank"
+           class="w-full py-3.5 px-5 rounded-2xl bg-emerald-600/90 hover:bg-emerald-600 backdrop-blur-xl text-white font-semibold text-xs sm:text-sm shadow-2xl border border-emerald-400/30 flex items-center justify-between transition-all duration-300 hover:scale-[1.02]">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                    <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                </div>
+                <div>
+                    <span class="block text-white leading-none">Análise Preliminar</span>
+                    <span class="text-[10px] text-emerald-100">Falar com o escritório agora</span>
+                </div>
+            </div>
+            <span class="text-xs bg-white/20 px-3 py-1 rounded-lg">WhatsApp &rarr;</span>
+        </a>
+    </div>
 
-    <!-- SCRIPT ACCORDION FAQ -->
+    <!-- SCRIPTS: CALCULADORA, FAQ & SCROLL REVEAL -->
     <script>
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('.faq-icon');
-                const isHidden = content.classList.contains('hidden');
-                
-                // Fechar outros itens
-                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-                document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
-                
-                if (isHidden) {
-                    content.classList.remove('hidden');
-                    icon.classList.add('rotate-180');
+        // 1. Lógica do Simulador Interativo
+        const range = document.getElementById('descontoRange');
+        const valorDisplay = document.getElementById('valorDisplay');
+        const tempoSelect = document.getElementById('tempoSelect');
+        const resultadoEstimativa = document.getElementById('resultadoEstimativa');
+        const btnWhatsapp = document.getElementById('btnWhatsappSimulacao');
+
+        function atualizarCalculo() {
+            const valorMensal = parseFloat(range.value);
+            const meses = parseInt(tempoSelect.value);
+            const total = valorMensal * meses;
+
+            valorDisplay.textContent = `R$ ${valorMensal.toLocaleString('pt-BR')} / mês`;
+            resultadoEstimativa.textContent = `R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+
+            const msgTexto = encodeURIComponent(
+                `Olá, Drs. Douglas e Marta! Realizei a simulação de isenção de IRPF no site:\n\n` +
+                `• Desconto mensal estimado: R$ ${valorMensal.toLocaleString('pt-BR')}\n` +
+                `• Tempo de diagnóstico/aposentadoria: ${meses} meses\n` +
+                `• Total estimado a restituir: R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}\n\n` +
+                `Gostaria de verificar a viabilidade do meu caso.`
+            );
+
+            btnWhatsapp.onclick = () => {
+                window.open(`https://wa.me/5591999999999?text=${msgTexto}`, '_blank');
+            };
+        }
+
+        range.addEventListener('input', atualizarCalculo);
+        tempoSelect.addEventListener('change', atualizarCalculo);
+        atualizarCalculo();
+
+        // 2. Accordion FAQ
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const body = btn.nextElementSibling;
+                const arrow = btn.querySelector('.faq-arrow');
+                const isExpanded = !body.classList.contains('hidden');
+
+                document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+                document.querySelectorAll('.faq-arrow').forEach(a => a.classList.remove('rotate-180'));
+
+                if (!isExpanded) {
+                    body.classList.remove('hidden');
+                    arrow.classList.add('rotate-180');
                 }
             });
         });
+
+        // 3. Scroll Reveal Animation (Efeitos suaves ao rolar)
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
