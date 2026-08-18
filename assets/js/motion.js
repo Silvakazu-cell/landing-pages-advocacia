@@ -199,6 +199,27 @@
     sections.forEach(function (s) { observer.observe(s); });
   }
 
+  /* --- Gráficos: dispara o traçado quando a figura entra na viewport --- */
+  function initCharts() {
+    var charts = $$('[data-chart]');
+    if (!charts.length) return;
+
+    if (reduced || !('IntersectionObserver' in window)) {
+      charts.forEach(function (el) { el.classList.add('is-charted'); });
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-charted');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.3 });
+
+    charts.forEach(function (el) { observer.observe(el); });
+  }
+
   /* --- Ano corrente no rodapé --- */
   function initYear() {
     $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
@@ -210,6 +231,7 @@
     initCounters();
     initSpotlight();
     initAccordion();
+    initCharts();
     initSectionSpy();
     initYear();
   }
