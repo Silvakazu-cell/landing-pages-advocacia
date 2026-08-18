@@ -80,8 +80,8 @@ carregamento do script. Todo o movimento é suprimido sob `prefers-reduced-motio
 O conteúdo é informativo, sem promessa de resultado, em observância ao Código de Ética e
 Disciplina da OAB e ao Provimento nº 205/2021 do Conselho Federal da OAB.
 
-## Pendências de conteúdo
+## Contato
 
-O número de WhatsApp `5591999999999` é um marcador. Substitua-o nas duas páginas antes de
-publicar — as ocorrências estão nos links `wa.me` e nas constantes `TELEFONE` dos scripts
-inline de cada página.
+Todos os CTAs apontam para o WhatsApp `5591987697554`. Ao trocar o número, atualize as duas
+páginas por inteiro: os links `wa.me` do herói, da chamada final, do rodapé e do contato
+flutuante, além da constante `TELEFONE` do script inline de cada página.
