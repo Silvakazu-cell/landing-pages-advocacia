@@ -57,6 +57,8 @@ Para alterar a paleta ou o ritmo de animação de todo o site, edite apenas os t
 
 Gráficos: `figure`, `bars` / `bar` (`--signal`, `--muted`), `donut`, `curve`, `legend` e `versus`.
 
+Navegação: `menu-toggle` e o menu lateral (`drawer`, `drawer__panel`, `drawer__area`, `drawer__jump`).
+
 Seções usam `.section` com os modificadores `--dark`, `--sunken`, `--tight` e `--hairline`;
 a largura é controlada por `.container`, `.container--mid` e `.container--narrow`.
 
@@ -76,6 +78,7 @@ a largura é controlada por `.container`, `.container--mid` e `.container--narro
 | `data-accordion` (`multi` para permitir vários abertos) | Acordeão acessível com `aria-expanded` |
 | `data-chart` | Dispara o traçado dos gráficos ao entrar na viewport |
 | `data-spy` | Destaca o link da seção visível |
+| `data-drawer` / `data-drawer-toggle` / `data-drawer-close` | Menu lateral: painel, botão que abre e fecho (aplicável ao scrim e ao botão dedicado) |
 | `data-year` | Ano corrente |
 
 A entrada do herói é puramente CSS (`.hero-in` e `.line-mask`), para não depender do
@@ -85,6 +88,23 @@ Como os estados iniciais de animação partem de invisível, cada página traz u
 que os neutraliza: sem JavaScript, o conteúdo aparece por inteiro, os gráficos assumem os valores
 finais e as respostas da FAQ ficam abertas. Ao criar um efeito novo cujo estado inicial esconda
 conteúdo, acrescente a contrapartida nesse bloco.
+
+### Menu lateral
+
+Cada página tem um `<button data-drawer-toggle>` no cabeçalho e um painel `<div data-drawer>`
+logo após o `</header>`. O painel lista as três áreas de atuação — com a página atual marcada
+por `aria-current="page"` e o rótulo "Você está aqui" — seguidas dos atalhos de seção da própria
+página e do contato.
+
+`initDrawer()`, em `motion.js`, cuida do ciclo completo: abre e fecha por clique, por `Esc` ou
+pelo véu de fundo; prende o foco dentro do painel enquanto aberto (`Tab` circula, sem escapar
+para o conteúdo atrás); devolve o foco ao botão que abriu ao fechar; e fecha automaticamente ao
+clicar num link de âncora (`#`) do próprio painel. É a navegação disponível no mobile, onde
+`.navlinks` fica oculta — abrir uma quarta página sem repetir esse painel deixaria o site sem
+nenhum menu abaixo de `720px`.
+
+Para adicionar uma quarta área, edite as três instâncias do bloco "Áreas de atuação" (uma por
+página) e ajuste `aria-current` conforme a página atual.
 
 ### Gráficos
 

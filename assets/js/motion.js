@@ -220,6 +220,69 @@
     charts.forEach(function (el) { observer.observe(el); });
   }
 
+  /* --- Menu lateral: abre, fecha, escalona os itens e prende o foco --- */
+  function initDrawer() {
+    var toggle = $('[data-drawer-toggle]');
+    var drawer = $('[data-drawer]');
+    if (!toggle || !drawer) return;
+
+    var panel = $('.drawer__panel', drawer);
+    var scrim = $('.drawer__scrim', drawer);
+    var closeBtn = $('[data-drawer-close]', drawer);
+    var items = $$('.drawer__item', drawer);
+    var root = document.documentElement;
+    var ultimoFoco = null;
+
+    items.forEach(function (el, i) { el.style.setProperty('--d', (i * 45) + 'ms'); });
+
+    function focaveis() {
+      return $$('a[href], button:not([disabled])', panel).filter(function (el) {
+        return el.offsetParent !== null;
+      });
+    }
+
+    function abrir() {
+      ultimoFoco = document.activeElement;
+      drawer.classList.add('is-open');
+      root.classList.add('is-menu-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      drawer.removeAttribute('aria-hidden');
+      window.setTimeout(function () {
+        var alvo = closeBtn || focaveis()[0];
+        if (alvo) alvo.focus();
+      }, reduced ? 0 : 120);
+    }
+
+    function fechar() {
+      drawer.classList.remove('is-open');
+      root.classList.remove('is-menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+      if (ultimoFoco && document.contains(ultimoFoco)) ultimoFoco.focus();
+    }
+
+    toggle.addEventListener('click', function () {
+      if (drawer.classList.contains('is-open')) fechar(); else abrir();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', fechar);
+    if (scrim) scrim.addEventListener('click', fechar);
+
+    drawer.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { fechar(); return; }
+      if (e.key !== 'Tab') return;
+      var lista = focaveis();
+      if (!lista.length) return;
+      var primeiro = lista[0], ultimo = lista[lista.length - 1];
+      if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+      else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+    });
+
+    // Um link do menu que aponta para a própria página apenas fecha o painel.
+    $$('a[href]', panel).forEach(function (link) {
+      if (link.getAttribute('href').charAt(0) === '#') link.addEventListener('click', fechar);
+    });
+  }
+
   /* --- Ano corrente no rodapé --- */
   function initYear() {
     $$('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
@@ -232,6 +295,7 @@
     initSpotlight();
     initAccordion();
     initCharts();
+    initDrawer();
     initSectionSpy();
     initYear();
   }
