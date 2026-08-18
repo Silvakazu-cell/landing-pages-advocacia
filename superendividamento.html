@@ -1,341 +1,465 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repactuação de Dívidas e Limitação de Consignados | Servidor Público | Kazunari & Antunes</title>
-    <meta name="description" content="Proteja seu mínimo existencial e reorganize consignados e dívidas bancárias sob a Lei nº 14.181/2021.">
-    
-    <!-- Google Fonts -->
+    <title>Repactuação de Dívidas e Limitação de Consignados | Kazunari Advocacia</title>
+    <meta name="description" content="Preservação do mínimo existencial e readequação de consignados, cartões e dívidas bancárias de servidores públicos, com base na Lei nº 14.181/2021.">
+    <meta name="theme-color" content="#F6F5F1">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Repactuação de Dívidas e Limitação de Consignados | Kazunari Advocacia">
+    <meta property="og:description" content="A Lei do Superendividamento assegura a preservação do mínimo existencial e permite readequar parcelas bancárias descontadas em folha.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            navy: '#091A2B',
-                            dark: '#0E2A47',
-                            sky: '#0284C7',
-                            skyLight: '#38BDF8',
-                            emerald: '#10B981',
-                            slate: '#F8FAFC'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .hero-pattern-2 {
-            background: radial-gradient(circle at top right, rgba(2, 132, 199, 0.15), transparent 45%),
-                        linear-gradient(135deg, #091A2B 0%, #0E2A47 100%);
-        }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px -10px rgba(9, 26, 43, 0.15);
-        }
-    </style>
-</head>
-<body class="font-sans text-slate-800 bg-[#FDFDFE] antialiased">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
-    <!-- TOPBAR / CREDENCIAIS -->
-    <div class="bg-brand-navy border-b border-slate-800/80 py-2.5 px-4 text-xs text-slate-300">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-2 font-medium">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                Direito Bancário & Proteção ao Servidor Público
+    <link rel="stylesheet" href="assets/css/design-system.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1211'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23F6F5F1' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+<div class="progress" aria-hidden="true"><div class="progress__bar" data-progress></div></div>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="header" data-header>
+    <div class="container header__inner">
+        <a class="brandmark" href="index.html" aria-label="Kazunari Advocacia — início">
+            <span class="brandmark__glyph" aria-hidden="true">K</span>
+            <span>
+                <span class="brandmark__name">Kazunari</span>
+                <span class="brandmark__sub">Advocacia</span>
+            </span>
+        </a>
+
+        <nav class="navlinks" aria-label="Seções da página">
+            <a class="navlink" href="#sinais" data-spy>Sinais de alerta</a>
+            <a class="navlink" href="#mecanismos" data-spy>Mecanismos</a>
+            <a class="navlink" href="#documentos" data-spy>Documentos</a>
+            <a class="navlink" href="#duvidas" data-spy>Dúvidas</a>
+        </nav>
+
+        <a class="btn btn--outline" href="#sinais">
+            <span>Avaliar meu caso</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+    </div>
+</header>
+
+<main id="conteudo">
+
+    <!-- ============ HERÓI ============ -->
+    <section class="section aura" id="topo">
+        <div class="container container--mid" style="text-align:center">
+
+            <p class="pill hero-in" style="--reveal-delay:80ms">
+                <span class="dot" aria-hidden="true"></span>
+                Lei nº 14.181/2021 &bull; Proteção do mínimo existencial
+            </p>
+
+            <h1 class="display display--xl" style="margin-top:var(--sp-6)">
+                <span class="line-mask" style="--reveal-delay:160ms"><span>Retome o controle do</span></span>
+                <span class="line-mask" style="--reveal-delay:260ms"><span>seu salário e limite os</span></span>
+                <span class="line-mask" style="--reveal-delay:360ms"><span>descontos de <em class="accent-word">consignados</em></span></span>
+            </h1>
+
+            <p class="lead hero-in" style="--reveal-delay:520ms; margin:var(--sp-6) auto 0; text-align:center">
+                A Lei do Superendividamento assegura a preservação do mínimo existencial e permite readequar
+                parcelas bancárias que comprometem a sua subsistência.
+            </p>
+
+            <div class="cluster cluster--center cluster--stack-mobile hero-in" style="--reveal-delay:640ms; margin-top:var(--sp-7)">
+                <a class="btn btn--primary btn--lg" href="https://wa.me/5591999999999?text=Ol%C3%A1%2C%20Dr.%20Douglas.%20Gostaria%20de%20uma%20an%C3%A1lise%20do%20meu%20contracheque%20para%20readequa%C3%A7%C3%A3o%20de%20d%C3%ADvidas." target="_blank" rel="noopener">
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <span>Solicitar análise do contracheque</span>
+                </a>
+                <a class="btn btn--outline btn--lg" href="#sinais">
+                    <span>Ver sinais de alerta</span>
+                    <svg class="btn__arrow" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m-6-6 6 6 6-6"/></svg>
+                </a>
             </div>
-            <div class="text-slate-400 text-center sm:text-right">
-                <span>Douglas Kazunari • OAB/PA 24.937</span>
-                <span class="mx-2 text-slate-600">|</span>
-                <span>Marta Inez Antunes • OAB/PA 22.706</span>
+
+            <div class="hero-in" style="--reveal-delay:820ms; margin-top:var(--sp-10); display:flex; justify-content:center">
+                <span class="scroll-cue">
+                    <span>Role para ver</span>
+                    <span class="scroll-cue__line" aria-hidden="true"></span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MÉTRICAS ============ -->
+    <div class="container">
+        <div class="stats" data-stagger="110">
+            <div class="stat" data-reveal="up">
+                <span class="stat__value">Lei <span data-count-to="14181" data-count-duration="1600">14181</span></span>
+                <span class="stat__label">Marco do superendividamento</span>
+            </div>
+            <div class="stat" data-reveal="up">
+                <span class="stat__value"><span data-count-to="3">3</span> esferas</span>
+                <span class="stat__label">Servidores federais, estaduais e municipais</span>
+            </div>
+            <div class="stat" data-reveal="up">
+                <span class="stat__value"><span data-count-to="100">100</span>% digital</span>
+                <span class="stat__label">Atendimento em todo o Brasil</span>
             </div>
         </div>
     </div>
 
-    <!-- NAVBAR -->
-    <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-brand-navy flex items-center justify-center text-brand-skyLight font-extrabold text-lg border border-brand-sky/30 shadow-sm">
-                    K&A
-                </div>
-                <div>
-                    <div class="font-bold text-slate-900 leading-none text-base">Kazunari & Antunes</div>
-                    <div class="text-[11px] text-slate-500 font-medium tracking-wide uppercase mt-1">Advogados Associados</div>
-                </div>
-            </div>
-            <a href="https://wa.me/5591999999999?text=Olá,%20sou%20servidor%20público%20e%20gostaria%20de%20uma%20análise%20sobre%20a%20Lei%20do%20Superendividamento." 
-               target="_blank"
-               class="hidden sm:inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold py-2.5 px-5 rounded-lg shadow-sm transition-all duration-200 hover:shadow-md">
-                <span>Analisar Meu Contracheque</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
+    <!-- ============ FAIXA DE REFERÊNCIAS ============ -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+            <span class="ticker__item">Lei nº 14.181/2021</span>
+            <span class="ticker__item">Código de Defesa do Consumidor</span>
+            <span class="ticker__item">Mínimo existencial</span>
+            <span class="ticker__item">Margem consignável</span>
+            <span class="ticker__item">Revisão de RMC e RCC</span>
+            <span class="ticker__item">Plano de pagamento global</span>
+            <span class="ticker__item">Lei nº 14.181/2021</span>
+            <span class="ticker__item">Código de Defesa do Consumidor</span>
+            <span class="ticker__item">Mínimo existencial</span>
+            <span class="ticker__item">Margem consignável</span>
+            <span class="ticker__item">Revisão de RMC e RCC</span>
+            <span class="ticker__item">Plano de pagamento global</span>
         </div>
-    </nav>
+    </div>
 
-    <!-- HERO SECTION -->
-    <header class="hero-pattern-2 text-white py-20 lg:py-28 px-6 relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-brand-skyLight font-semibold text-xs mb-8 tracking-wide uppercase">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                Proteção Salarial • Lei nº 14.181/2021
+    <!-- ============ SINAIS DE ALERTA (INTERATIVO) ============ -->
+    <section class="section" id="sinais">
+        <div class="container container--mid">
+            <div class="section-head" data-reveal="up">
+                <span class="eyebrow">Identificação de abusividades</span>
+                <h2 class="balance">Você se identifica com algum destes cenários?</h2>
+                <p class="lead">Selecione o que se aplica ao seu contracheque. O resumo acompanha a mensagem de contato.</p>
             </div>
-            
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
-                Retome o controle do seu salário e limite os descontos de <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-skyLight to-sky-200">consignados e cartões</span>
-            </h1>
-            
-            <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-                A Lei do Superendividamento assegura a preservação do seu <strong>Mínimo Existencial</strong>, permitindo readequar parcelas bancárias que sufocam a sua subsistência.
+
+            <div class="grid grid--2 grid--gap-lg" data-stagger="90" id="listaSinais">
+                <button class="card check" type="button" aria-pressed="false" data-sinal="Margem consignável ultrapassada" data-reveal="up" data-spotlight>
+                    <span class="check__box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+                    </span>
+                    <span>
+                        <span class="h3 card__title" style="display:block">Margem consignável ultrapassada</span>
+                        <span class="card__text">Os descontos em folha superam o teto legal previsto para o seu regime funcional.</span>
+                    </span>
+                </button>
+
+                <button class="card check" type="button" aria-pressed="false" data-sinal="Descontos de RMC e RCC sem amortização" data-reveal="up" data-spotlight>
+                    <span class="check__box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+                    </span>
+                    <span>
+                        <span class="h3 card__title" style="display:block">Descontos de RMC e RCC sem fim</span>
+                        <span class="card__text">Reserva de margem que cobra apenas juros rotativos e nunca amortiza o saldo devedor.</span>
+                    </span>
+                </button>
+
+                <button class="card check" type="button" aria-pressed="false" data-sinal="Comprometimento das despesas básicas" data-reveal="up" data-spotlight>
+                    <span class="check__box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+                    </span>
+                    <span>
+                        <span class="h3 card__title" style="display:block">Comprometimento do básico</span>
+                        <span class="card__text">O saldo líquido que resta é insuficiente para moradia, saúde e alimentação.</span>
+                    </span>
+                </button>
+
+                <button class="card check" type="button" aria-pressed="false" data-sinal="Ciclo contínuo de refinanciamentos" data-reveal="up" data-spotlight>
+                    <span class="check__box" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+                    </span>
+                    <span>
+                        <span class="h3 card__title" style="display:block">Ciclo contínuo de empréstimos</span>
+                        <span class="card__text">Necessidade de novos refinanciamentos ou cheque especial para cobrir despesas correntes.</span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="result" style="margin-top:var(--sp-6)" data-reveal="up">
+                <span class="result__label">Resumo da sua triagem</span>
+                <p class="counter-note" style="margin-top:var(--sp-4); justify-content:center">
+                    <strong id="sinaisContagem" aria-live="polite">0</strong>
+                    <span class="muted">de 4 sinais selecionados</span>
+                </p>
+                <p class="result__note" style="margin-top:var(--sp-4)" id="sinaisMensagem">
+                    Dois ou mais sinais indicam que seus rendimentos podem ser readequados sob a Lei do Superendividamento.
+                </p>
+                <button class="btn btn--light btn--lg" type="button" id="btnSinais" style="margin-top:var(--sp-5)">
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <span>Enviar triagem para análise</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MECANISMOS ============ -->
+    <section class="section section--dark on-dark" id="mecanismos">
+        <div class="container">
+            <div class="section-head" data-reveal="up">
+                <span class="eyebrow">Mecanismos jurídicos</span>
+                <h2 class="balance">Como a lei protege seus rendimentos</h2>
+            </div>
+
+            <div class="grid grid--3 grid--gap-lg" data-stagger="120">
+                <article class="card card--dark" data-reveal="up" data-spotlight>
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-3 6a3 3 0 0 0 6 0zM17 7l-3 6a3 3 0 0 0 6 0z"/></svg>
+                    </span>
+                    <h3 class="card__title">Readequação de parcelas</h3>
+                    <p class="card__text">Ajuste técnico das parcelas descontadas em contracheque e em conta corrente aos limites legais aplicáveis.</p>
+                </article>
+
+                <article class="card card--dark" data-reveal="up" data-spotlight>
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-2.8 7.6-7 9-4.2-1.4-7-4.8-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </span>
+                    <h3 class="card__title">Preservação do mínimo existencial</h3>
+                    <p class="card__text">Garantia legal de que parcela substancial da remuneração permaneça intacta para a subsistência digna.</p>
+                </article>
+
+                <article class="card card--dark" data-reveal="up" data-spotlight>
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M9 13h6M9 17h4"/></svg>
+                    </span>
+                    <h3 class="card__title">Plano global de pagamento</h3>
+                    <p class="card__text">Reunificação das obrigações financeiras em um cronograma factível, sem cobranças abusivas.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DOCUMENTOS ============ -->
+    <section class="section" id="documentos">
+        <div class="container">
+            <div class="section-head" data-reveal="up">
+                <span class="eyebrow">Documentação simples</span>
+                <h2 class="balance">O que é necessário para o cálculo</h2>
+            </div>
+
+            <div class="grid grid--3 grid--gap-lg" data-stagger="100">
+                <article class="card" data-reveal="up" data-spotlight>
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M9 13h6M9 17h4"/></svg>
+                    </span>
+                    <h3 class="card__title">Últimos três contracheques</h3>
+                    <p class="card__text">Para apuração da margem líquida e dos descontos compulsórios e facultativos.</p>
+                </article>
+
+                <article class="card" data-reveal="up" data-spotlight>
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5m0 14h16"/><path d="M8 15v-4m4 4V8m4 7v-6"/></svg>
+                    </span>
+                    <h3 class="card__title">Extrato de consignações</h3>
+                    <p class="card__text">Obtido no SouGov, no portal do servidor ou no aplicativo do órgão pagador.</p>
+                </article>
+
+                <article class="card" data-reveal="up" data-spotlight>
+                    <span class="icon-badge" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.5 1.7-2.2 3-2.2s2.4.7 3 2.2M15 10h3m-3 4h2"/></svg>
+                    </span>
+                    <h3 class="card__title">Documento de identificação</h3>
+                    <p class="card__text">RG, CNH ou documento funcional com foto.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ DÚVIDAS ============ -->
+    <section class="section section--sunken section--hairline" id="duvidas">
+        <div class="container container--narrow">
+            <div class="section-head" data-reveal="up">
+                <span class="eyebrow">Esclarecimentos</span>
+                <h2 class="balance">Dúvidas frequentes</h2>
+            </div>
+
+            <div class="accordion" data-accordion data-stagger="70">
+                <div class="accordion__item" data-reveal="up">
+                    <button class="accordion__trigger" type="button">
+                        <span>A repactuação judicial impede o recebimento do meu salário?</span>
+                        <span class="accordion__sign" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion__panel"><div><p class="accordion__body">
+                        Não. A finalidade da medida é justamente assegurar que a remuneração chegue desimpedida à sua conta
+                        bancária, limitando retenções excessivas.
+                    </p></div></div>
+                </div>
+
+                <div class="accordion__item" data-reveal="up">
+                    <button class="accordion__trigger" type="button">
+                        <span>A medida atende servidores federais, estaduais e municipais?</span>
+                        <span class="accordion__sign" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion__panel"><div><p class="accordion__body">
+                        Sim. A Lei nº 14.181/2021 é de âmbito nacional e alcança servidores públicos ativos, inativos
+                        e pensionistas de todas as esferas e poderes.
+                    </p></div></div>
+                </div>
+
+                <div class="accordion__item" data-reveal="up">
+                    <button class="accordion__trigger" type="button">
+                        <span>É possível revisar cobranças de cartão de crédito consignado (RMC)?</span>
+                        <span class="accordion__sign" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion__panel"><div><p class="accordion__body">
+                        Sim. Verificada a abusividade na contratação de cartões com reserva de margem consignável (RMC ou RCC)
+                        sem prazo final de quitação, o Judiciário admite a conversão em empréstimo tradicional, com recálculo ou anulação.
+                    </p></div></div>
+                </div>
+
+                <div class="accordion__item" data-reveal="up">
+                    <button class="accordion__trigger" type="button">
+                        <span>Preciso deixar de pagar minhas dívidas para ingressar com o pedido?</span>
+                        <span class="accordion__sign" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion__panel"><div><p class="accordion__body">
+                        Não. A lei não incentiva a inadimplência: ela organiza o pagamento em um plano compatível com a renda,
+                        preservando o mínimo existencial durante o cumprimento.
+                    </p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CHAMADA FINAL ============ -->
+    <section class="section section--dark on-dark section--tight" id="contato">
+        <div class="container container--narrow" style="text-align:center">
+            <span class="eyebrow eyebrow--center" data-reveal="up">Próximo passo</span>
+            <h2 class="balance" style="margin-top:var(--sp-4)" data-reveal="up">Reorganize suas finanças com respaldo jurídico</h2>
+            <p class="lead" style="margin:var(--sp-5) auto 0" data-reveal="up">
+                Envie seus documentos para o cálculo detalhado da margem consignável e das retenções bancárias.
             </p>
-            
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
-                <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20uma%20análise%20do%20meu%20contracheque%20para%20readequação%20de%20dívidas." 
-                   target="_blank"
-                   class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base py-4 px-8 rounded-xl shadow-lg shadow-emerald-950/40 transition-all duration-300 hover:scale-[1.02]">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    <span>Solicitar Análise de Contracheque</span>
+            <div class="cluster cluster--center" style="margin-top:var(--sp-7)" data-reveal="up">
+                <a class="btn btn--primary btn--lg" href="https://wa.me/5591999999999?text=Ol%C3%A1%2C%20Dr.%20Douglas.%20Gostaria%20de%20iniciar%20minha%20an%C3%A1lise%20sobre%20a%20Lei%20do%20Superendividamento." target="_blank" rel="noopener">
+                    <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    <span>Falar com o escritório</span>
                 </a>
             </div>
-
-            <!-- SELOS DE CONFIANÇA -->
-            <div class="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-                <span class="flex items-center gap-1.5">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Atende Servidores Federais, Estaduais e Municipais
-                </span>
-                <span class="flex items-center gap-1.5">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Cálculo Rigoroso da Margem Consignável
-                </span>
-                <span class="flex items-center gap-1.5">
-                    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    Atendimento Online em Todo o Brasil
-                </span>
-            </div>
-        </div>
-    </header>
-
-    <!-- SEÇÃO 1: DIAGNÓSTICO DO LEAD -->
-    <section class="py-20 px-6 max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <span class="text-brand-sky font-bold text-xs uppercase tracking-wider">Identificação de Abusividades</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Você se identifica com algum destes cenários?</h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex gap-4 items-start">
-                <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold shrink-0">!</div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">Margem Consignável Ultrapassada</h4>
-                    <p class="text-slate-500 text-xs sm:text-sm mt-1">Os descontos em folha superam o teto legal permitido por lei para o seu regime funcional.</p>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex gap-4 items-start">
-                <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold shrink-0">!</div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">Descontos de RMC e RCC Infinitos</h4>
-                    <p class="text-slate-500 text-xs sm:text-sm mt-1">Descontos de Reserva de Margem que cobram apenas juros rotativos e nunca amortizam o saldo devedor.</p>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex gap-4 items-start">
-                <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold shrink-0">!</div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">Comprometimento do Básico</h4>
-                    <p class="text-slate-500 text-xs sm:text-sm mt-1">O saldo líquido que sobra na conta bancária é insuficiente para moradia, saúde e alimentação.</p>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover flex gap-4 items-start">
-                <div class="w-9 h-9 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center font-bold shrink-0">!</div>
-                <div>
-                    <h4 class="font-bold text-slate-900 text-sm sm:text-base">Ciclo Contínuo de Empréstimos</h4>
-                    <p class="text-slate-500 text-xs sm:text-sm mt-1">Necessidade de contratar novos refinanciamentos ou usar cheque especial para cobrir despesas correntes.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-8 bg-brand-navy text-white p-6 rounded-2xl text-center">
-            <p class="text-sm sm:text-base text-slate-200">
-                Se você respondeu <strong class="text-brand-skyLight">SIM</strong> a duas ou mais situações, seus rendimentos podem ser readequados conforme a <strong>Lei do Superendividamento</strong>.
-            </p>
         </div>
     </section>
+</main>
 
-    <!-- SEÇÃO 2: COMO A LEI ATUA -->
-    <section class="py-20 px-6 bg-slate-900 text-white">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-skyLight font-bold text-xs uppercase tracking-wider">Mecanismos Jurídicos</span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mt-2">
-                    Como a Lei Protege Seus Rendimentos
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-brand-dark/70 p-8 rounded-2xl border border-slate-700/60 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-brand-sky/20 text-brand-skyLight flex items-center justify-center text-xl font-black mb-6">⚖️</div>
-                    <h3 class="text-lg font-bold mb-3 text-white">Readequação de Parcelas</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Ajuste técnico das parcelas cobradas em contracheque e em conta corrente aos limites legais aplicáveis.</p>
-                </div>
-
-                <div class="bg-brand-dark/70 p-8 rounded-2xl border border-slate-700/60 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-brand-sky/20 text-brand-skyLight flex items-center justify-center text-xl font-black mb-6">🛡️</div>
-                    <h3 class="text-lg font-bold mb-3 text-white">Preservação do Mínimo Existencial</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Garantia legal de que uma parcela substancial da remuneração permaneça intacta para a subsistência digna.</p>
-                </div>
-
-                <div class="bg-brand-dark/70 p-8 rounded-2xl border border-slate-700/60 card-hover">
-                    <div class="w-12 h-12 rounded-xl bg-brand-sky/20 text-brand-skyLight flex items-center justify-center text-xl font-black mb-6">📑</div>
-                    <h3 class="text-lg font-bold mb-3 text-white">Plano Global de Pagamento</h3>
-                    <p class="text-slate-300 text-sm leading-relaxed">Reunificação das obrigações financeiras em um cronograma factível sem cobranças abusivas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 3: DOCUMENTAÇÃO -->
-    <section class="py-20 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-14">
-            <span class="text-brand-sky font-bold text-xs uppercase tracking-wider">Documentos Simples</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Documentos Necessários para o Cálculo</h2>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover text-center flex flex-col items-center">
-                <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-sky flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                </div>
-                <h4 class="font-bold text-slate-900 text-base mb-1">Últimos 3 Contracheques</h4>
-                <p class="text-slate-500 text-xs">Para apuração da margem líquida e dos descontos compulsórios e facultativos.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover text-center flex flex-col items-center">
-                <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-sky flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                </div>
-                <h4 class="font-bold text-slate-900 text-base mb-1">Extrato de Consignações</h4>
-                <p class="text-slate-500 text-xs">Obtido no SouGov, portal do servidor ou aplicativo do órgão pagador.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm card-hover text-center flex flex-col items-center">
-                <div class="w-12 h-12 rounded-2xl bg-sky-50 text-brand-sky flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
-                </div>
-                <h4 class="font-bold text-slate-900 text-base mb-1">Documento de Identificação</h4>
-                <p class="text-slate-500 text-xs">RG, CNH ou documento funcional com foto.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEÇÃO 4: FAQ INTERATIVO -->
-    <section class="py-20 px-6 bg-slate-50 border-y border-slate-200/60">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-brand-sky font-bold text-xs uppercase tracking-wider">Esclarecimentos</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">Dúvidas Frequentes</h2>
-            </div>
-
-            <div class="space-y-4">
-                <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm transition-all duration-200">
-                    <button class="faq-toggle w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50/80 transition-colors">
-                        <span>A renegociação judicial impede o recebimento do meu salário?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-content hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                        Não. Pelo contrário, a finalidade primordial da ação e da repactuação é assegurar que a remuneração chegue desimpedida à sua conta bancária, limitando retenções abusivas.
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm transition-all duration-200">
-                    <button class="faq-toggle w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50/80 transition-colors">
-                        <span>A medida atende servidores federais, estaduais e municipais?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-content hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                        Sim. A Lei do Superendividamento (Lei nº 14.181/2021) é de âmbito nacional e protege servidores públicos ativos, inativos e pensionistas de todas as esferas e poderes.
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl border border-slate-200/80 overflow-hidden shadow-sm transition-all duration-200">
-                    <button class="faq-toggle w-full p-5 text-left font-semibold text-slate-900 flex justify-between items-center gap-4 hover:bg-slate-50/80 transition-colors">
-                        <span>É possível cancelar cobranças de cartão de crédito consignado (RMC)?</span>
-                        <svg class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div class="faq-content hidden p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/30">
-                        Sim. Quando verificada a abusividade na contratação de cartões com reserva de margem consignável (RMC/RCC) sem prazo final de quitação, o Judiciário autoriza a conversão em empréstimo tradicional com recálculo ou anulação.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CTA FINAL -->
-    <footer id="contato" class="bg-brand-navy text-white pt-16 pb-12 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-4">Reorganize Suas Finanças com Respaldo Jurídico</h2>
-            <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-xl mx-auto">
-                Envie seus dados para um cálculo detalhado da margem consignável e das retenções bancárias.
-            </p>
-            
-            <a href="https://wa.me/5591999999999?text=Olá,%20gostaria%20de%20iniciar%20minha%20análise%20sobre%20a%20Lei%20do%20Superendividamento." 
-               target="_blank"
-               class="inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base py-4 px-10 rounded-xl shadow-lg transition-all duration-300 hover:scale-[1.02]">
-                <span>Falar com o Escritório pelo WhatsApp</span>
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-
-            <!-- DADOS DOS ADVOGADOS -->
-            <div class="mt-14 pt-8 border-t border-slate-800 text-xs text-slate-400 space-y-2">
-                <p class="font-semibold text-slate-300">Kazunari & Antunes Advogados Associados</p>
-                <p>Douglas Kazunari — OAB/PA 24.937 &bull; Marta Inez Antunes — OAB/PA 22.706</p>
-                <p class="text-slate-400 text-[11px] mt-4">
-                    Este site tem caráter meramente informativo e educacional, em estrita observância ao Código de Ética e Disciplina da OAB e ao Provimento 205/2021 do CFOAB.
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer on-dark">
+    <div class="container">
+        <div class="footer__grid">
+            <div>
+                <a class="brandmark" href="index.html" aria-label="Kazunari Advocacia — início">
+                    <span class="brandmark__glyph" aria-hidden="true">K</span>
+                    <span>
+                        <span class="brandmark__name">Kazunari</span>
+                        <span class="brandmark__sub">Advocacia</span>
+                    </span>
+                </a>
+                <p class="text-sm muted" style="margin-top:var(--sp-5); max-width:34ch">
+                    Atuação em direito bancário e proteção do servidor público, com atendimento digital em todo o Brasil.
                 </p>
             </div>
+
+            <div>
+                <p class="footer__title">Áreas</p>
+                <nav class="stack" aria-label="Áreas de atuação">
+                    <a class="footer__link" href="index.html">Isenção de IRPF</a>
+                    <a class="footer__link" href="#mecanismos">Superendividamento</a>
+                    <a class="footer__link" href="#sinais">Triagem de sinais</a>
+                </nav>
+            </div>
+
+            <div>
+                <p class="footer__title">Contato</p>
+                <nav class="stack" aria-label="Canais de contato">
+                    <a class="footer__link" href="https://wa.me/5591999999999" target="_blank" rel="noopener">WhatsApp</a>
+                    <a class="footer__link" href="#duvidas">Dúvidas frequentes</a>
+                </nav>
+            </div>
         </div>
-    </footer>
 
-    <!-- BOTÃO WHATSAPP FLUTUANTE -->
-    <a href="https://wa.me/5591999999999?text=Olá,%20sou%20servidor%20público%20e%20gostaria%20de%20uma%20análise%20do%20meu%20contracheque." 
-       target="_blank"
-       aria-label="Fale no WhatsApp"
-       class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl transition-transform duration-300 hover:scale-110 flex items-center justify-center">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <div class="footer__legal">
+            <p><span class="strong">Kazunari Sociedade Individual de Advocacia</span> &bull; Douglas Kazunari — OAB/PA 24.937</p>
+            <p style="margin-top:var(--sp-3); max-width:78ch">
+                Conteúdo de caráter meramente informativo e educacional, em observância ao Código de Ética e Disciplina da OAB
+                e ao Provimento nº 205/2021 do Conselho Federal da OAB. As informações desta página não constituem consulta
+                jurídica nem promessa de resultado.
+            </p>
+            <p style="margin-top:var(--sp-3)">&copy; <span data-year>2026</span> Kazunari Advocacia. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ============ CONTATO FLUTUANTE ============ -->
+<div class="dock" data-dock data-dock-after="sinais">
+    <a class="dock__inner" href="https://wa.me/5591999999999?text=Ol%C3%A1%2C%20sou%20servidor%20p%C3%BAblico%20e%20gostaria%20de%20uma%20an%C3%A1lise%20do%20meu%20contracheque." target="_blank" rel="noopener">
+        <span class="dock__text">
+            <strong>Análise do contracheque</strong>
+            <span>Fale com o escritório agora</span>
+        </span>
+        <span class="dock__cta">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            <span>WhatsApp</span>
+        </span>
     </a>
+</div>
 
-    <!-- SCRIPT ACCORDION FAQ -->
-    <script>
-        document.querySelectorAll('.faq-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                const icon = button.querySelector('.faq-icon');
-                const isHidden = content.classList.contains('hidden');
-                
-                document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
-                document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
-                
-                if (isHidden) {
-                    content.classList.remove('hidden');
-                    icon.classList.add('rotate-180');
-                }
-            });
-        });
-    </script>
+<script src="assets/js/motion.js" defer></script>
+
+<!-- Triagem interativa de sinais -->
+<script>
+(function () {
+  var lista = document.getElementById('listaSinais');
+  var contagem = document.getElementById('sinaisContagem');
+  var mensagem = document.getElementById('sinaisMensagem');
+  var botao = document.getElementById('btnSinais');
+  if (!lista || !contagem || !mensagem || !botao) return;
+
+  var TELEFONE = '5591999999999';
+  var sinais = Array.prototype.slice.call(lista.querySelectorAll('[data-sinal]'));
+
+  var TEXTOS = [
+    'Dois ou mais sinais indicam que seus rendimentos podem ser readequados sob a Lei do Superendividamento.',
+    'Um sinal já justifica a conferência da margem consignável no seu contracheque.',
+    'Dois sinais selecionados: o cenário é compatível com a readequação prevista na Lei nº 14.181/2021.',
+    'Três sinais selecionados: recomenda-se a análise técnica dos contratos e da margem consignável.',
+    'Quatro sinais selecionados: há forte indício de comprometimento do mínimo existencial.'
+  ];
+
+  function selecionados() {
+    return sinais.filter(function (s) { return s.getAttribute('aria-pressed') === 'true'; });
+  }
+
+  function atualizar() {
+    var ativos = selecionados();
+    contagem.textContent = ativos.length;
+    mensagem.textContent = TEXTOS[ativos.length] || TEXTOS[0];
+
+    var corpo = 'Olá, Dr. Douglas! Fiz a triagem no site sobre a Lei do Superendividamento.\n\n';
+    corpo += ativos.length
+      ? 'Sinais que identifiquei no meu contracheque:\n' + ativos.map(function (s) {
+          return '• ' + s.getAttribute('data-sinal');
+        }).join('\n') + '\n\n'
+      : 'Ainda não selecionei sinais no site, mas gostaria de entender se meu caso se enquadra.\n\n';
+    corpo += 'Gostaria de solicitar a análise do meu contracheque.';
+
+    botao.dataset.mensagem = corpo;
+  }
+
+  sinais.forEach(function (sinal) {
+    sinal.addEventListener('click', function () {
+      sinal.setAttribute('aria-pressed', sinal.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+      atualizar();
+    });
+  });
+
+  botao.addEventListener('click', function () {
+    window.open('https://wa.me/' + TELEFONE + '?text=' + encodeURIComponent(botao.dataset.mensagem || ''), '_blank', 'noopener');
+  });
+
+  atualizar();
+})();
+</script>
+
 </body>
 </html>
