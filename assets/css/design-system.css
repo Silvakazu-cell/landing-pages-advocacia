@@ -916,7 +916,12 @@ p { margin: 0; }
 .accordion__item.is-open .accordion__body { opacity: 1; transform: none; }
 
 /* 5.12 Rodapé */
-.footer { background: var(--ink); color: var(--on-dark); padding-block: var(--section-y) var(--sp-8); }
+.footer {
+  background: var(--ink);
+  color: var(--on-dark);
+  /* A folga inferior reserva espaço para o contato flutuante, que é fixo. */
+  padding-block: var(--section-y) clamp(6.5rem, 5.5rem + 3vw, 8.5rem);
+}
 .footer__grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -1361,7 +1366,6 @@ p { margin: 0; }
   .stats > :last-child:nth-child(odd) { grid-column: span 2; }
   .footer__grid { grid-template-columns: 1fr; gap: var(--sp-6); }
   .dock__text span { display: none; }
-  body { padding-bottom: 5rem; }
 }
 
 @media (max-width: 420px) {

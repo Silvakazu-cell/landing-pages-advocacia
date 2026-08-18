@@ -19,6 +19,21 @@
 
     <link rel="stylesheet" href="assets/css/design-system.css">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1211'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23F6F5F1' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+
+    <noscript>
+        <style>
+            /* Sem JavaScript, nada é revelado nem traçado: os estados iniciais de
+               animação são neutralizados para que a página continue legível. */
+            [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+            .bar__fill { width: calc(var(--v, 0) * 1%) !important; }
+            .donut__seg { stroke-dasharray: var(--v, 0) 100 !important; }
+            .curve__line { stroke-dashoffset: 0 !important; }
+            .curve__area, .curve__dot { opacity: 1 !important; }
+            .accordion__panel { grid-template-rows: 1fr !important; }
+            .accordion__body { opacity: 1 !important; transform: none !important; }
+            .dock { opacity: 1 !important; transform: translate(-50%, 0) !important; }
+        </style>
+    </noscript>
 </head>
 <body>
 

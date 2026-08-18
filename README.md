@@ -81,6 +81,11 @@ a largura é controlada por `.container`, `.container--mid` e `.container--narro
 A entrada do herói é puramente CSS (`.hero-in` e `.line-mask`), para não depender do
 carregamento do script. Todo o movimento é suprimido sob `prefers-reduced-motion: reduce`.
 
+Como os estados iniciais de animação partem de invisível, cada página traz um bloco `<noscript>`
+que os neutraliza: sem JavaScript, o conteúdo aparece por inteiro, os gráficos assumem os valores
+finais e as respostas da FAQ ficam abertas. Ao criar um efeito novo cujo estado inicial esconda
+conteúdo, acrescente a contrapartida nesse bloco.
+
 ### Gráficos
 
 Os gráficos são SVG inline, sem biblioteca. O valor de cada série vem de `--v` no markup e a
